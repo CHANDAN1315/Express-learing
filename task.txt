@@ -1,0 +1,20 @@
+Project 1 task
+
+REST API 
+
+GET/ users - List all users
+
+GET/ users/1 - Get the user wiht id 1 -|
+GET/ users/2 - Get the user wiht id 2 -| Dynamic path parameters
+
+Dynamic Path Parameters
+GET/ users/:id
+:id -> variable or Dynamic 
+
+
+POST/ users - Create new user
+
+PATCH/ users/1 - Edit the user wiht ID 1
+
+DELETE/ users/1 - Delete user wiht id 1
+

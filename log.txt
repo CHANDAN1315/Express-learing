@@ -1,0 +1,17 @@
+
+1679938543448: ::ffff:127.0.0.1 GET: /api/users/1
+1679938582557: ::ffff:127.0.0.1 GET: /api/users/2
+1679940737465: ::ffff:127.0.0.1 GET: /api/users/1
+1679940773126: ::ffff:127.0.0.1 GET: /api/users/1
+1683029803518: ::1 GET: /
+1683029811063: ::1 GET: /users
+1683029814821: ::1 GET: /user
+1683029814973: ::1 GET: /favicon.ico
+1683029833662: ::1 GET: /users
+1683032080143: ::1 GET: /api/users
+1683032092477: ::1 GET: /api/users
+1683032310278: ::1 POST: /api/users
+1683032369608: ::1 POST: /api/users
+1683032454247: ::1 POST: /api/users
+1683033342050: ::1 POST: /api/users
+1683033565126: ::1 POST: /api/users
