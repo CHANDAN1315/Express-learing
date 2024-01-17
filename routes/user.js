@@ -1,7 +1,7 @@
 
 const express = require("express");
 
-const router = express.Router();
+const router = express();
 const {
    handleGetAllUsers, 
    handleGetUserById, 
@@ -13,7 +13,6 @@ const {
 
 router.get('/', handleGetAllUsers).post("/", handleCreateNewUser);
 
-// router.post("/", handleCreateNewUser);
 
 
 router

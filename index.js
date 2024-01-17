@@ -2,34 +2,38 @@
 // const http = require('http')
 /* Why do we need Express ?*/
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const {connectMongoDb} = require('./connection')
 const userRouter = require('./routes/user')
 const port = 8000
 const {logReqRes} = require('./middlware')  // we dont have to write the index in the route it is bydefault understood by express
+const loginRouter = require('./routes/login')
 
 // Conneting the node with the database
 connectMongoDb('mongodb://127.0.0.1:27017/chandanK-db').then(() => console.log('MongoDB connected'))
 
-
 // Schema
 
-// Model creation
+app.use(cors({
+  credentials: true
+}))
 
-
+app.use(express.urlencoded({ extended: true }));
 
 //Middlware
-app.use(express.urlencoded({ extended: false }));
-
 app.use(logReqRes('log.txt'));
 
-// The validation are done inside middlewere
+app.use('/signin', loginRouter);
+
+app.use('/login', loginRouter);
 
 app.use('/api/users', userRouter);
 
-app.listen(port, () => { `Port is running at ${port}` });
+app.listen(port, () => { console.log(`server is running at PORT ${port}`) });
 
 
+// The validation are done inside middlewere
 /*
 app.get('/', (req, res) => {
   return res.send(`Hello ${req.query.name} from Home Page`)

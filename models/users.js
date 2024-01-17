@@ -18,6 +18,9 @@ const userSchema = new mongoose.Schema({
     },
     gender: {
         type: String
+    },
+    skin: {
+        type: String
     }
 }, { timestamps: true })
 

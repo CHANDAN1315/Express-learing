@@ -31,10 +31,11 @@
     1 show dbs
     2 use databaseName
     3 show collections
-    4 db.coll.find({})
-    5 db.coll.insert()
-    6. db.users.find({}) // show the data of the users collection
-
+    4 db.collection_name.find({})
+    5 db.collection_name.insert()
+            .Eg: db.users.find({}) // show the data of the users collection
+    6.db.collection_name.deleteMany({}) // delete all the data in collection
+    7.db.collection_name.delete({parameter: value}) // delete single data with key = value
 
  Working of mongoose 
 

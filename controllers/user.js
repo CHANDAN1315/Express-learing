@@ -16,7 +16,15 @@ async function handleGetUserById(req, res) {
 }
 
 async function handleUpdateUserById(req, res) {
-    await User.findByIdAndUpdate(req.params.id, { lastName: "Changed" });
+    await User.findByIdAndUpdate(req.params.id, {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        jobTitle: req.body.jobTitle,
+        gender: req.body.gender,
+        skin: req.body.skin
+    });
+    // console.log(req.params)
     return res.json({ status: 'success' });
 }
 
@@ -27,7 +35,7 @@ async function handleDeleteUserById(req, res) {
 
 async function handleCreateNewUser(req, res) {
     const body = req.body;
-    // console.log(req.body)
+    console.log(req.body)
     if (
         !body ||
         !body.firstName ||
@@ -44,7 +52,8 @@ async function handleCreateNewUser(req, res) {
         lastName: body.lastName,
         email: body.email,
         jobTitle: body.jobTitle,
-        gender: body.gender
+        gender: body.gender,
+        skin: body.skin
     })
 
     console.log('result', result);
