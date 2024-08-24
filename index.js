@@ -75,7 +75,7 @@ app.listen(port, () => {
 
 
 /*
-L3-4 RestFull api
+L3-4 RestFull api (Represental state transfer api)
 
 RestFull api are set of rules, standers and best practices
 
@@ -156,9 +156,9 @@ note : HTML rendring is faster than json rendring :-> server side rendring (ssr)
 // app
 //    .route("/api/users/:id")
 //    .get(async (req, res) => {
-//       // const id = Number(req.params.id);
-//       // const user = users.find((user) => user.id === id);
-//       // console.log(req.headers);  
+//        const id = Number(req.params.id);
+//        const user = users.find((user) => user.id === id);
+//    //  console.log(req.headers);  
  
 //       const user = await User.findById(req.params.id);
 //       if (!user) return res.status(404).json({ error: "user not found" })
